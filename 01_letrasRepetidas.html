@@ -10,11 +10,17 @@
     */
 
     //ENTRADA
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
 
-    
     //PROCESSAMENTO
+    let letras = listaDeLetras.map(letra => letra.toLowerCase())
+    let letrasrepetidas = new Set()
+    for (let letra of letras) {
+        letrasrepetidas.add(letra);
+    }
+    letrasrepetidas = Array.from(letrasrepetidas);
+    letrasrepetidas.sort();
 
-    
     //SAÍDA
-
+    alert(letrasrepetidas)
 </script>

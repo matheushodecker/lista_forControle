@@ -6,12 +6,24 @@
     Calcule a média das notas e apresente o resultado na tela.
     */
 
-    //ENTRADA
-    
+    // ENTRADA
 
-    //PROCESSAMENTO
-    
+    let qtdNotas = Number(prompt("Quantas notas o aluno obteve?"));
 
-    //SAÍDA
+    // PROCESSAMENTO
+
+    let soma = 0;
+    for (let i = 1; i <= qtdNotas; i++) {
+        nota = parseFloat(prompt("Informe a nota " + i + ": "));
+        soma += nota;
+    }
+
+    // SAÍDA
+
+    let media = soma / qtdNotas;
+
+    
+        alert(`a sua media foi ${media}!`);
+  
 
 </script>
