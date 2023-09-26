@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt("informe um numero"));
 
     //PROCESSAMENTO
-
+    let divisivel = 0;
+    for (let contador = 1; contador <= numero; contador++) {
+        if (numero % contador == 0) {
+            divisivel = divisivel + 1;
+        }
+        
+    }
 
     //SAÍDA
-
+    if (divisivel > 2) {
+        alert(`O número ${numero} não é um número primo!`);
+    }
+    else {
+        alert(`O número ${numero} é um número primo!`);
+    }
 </script>
