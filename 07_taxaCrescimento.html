@@ -7,10 +7,17 @@
 
     //ENTRADA
 
-    
-    //PROCESSAMENTO
+    let populacaoAtual = 80000;
+    let taxaCrescimento = 1.03;
 
-    
+
+    //PROCESSAMENTO
+    let ano = 0;
+    for (ano = 0; populacaoAtual <= 200000; ano++) {
+        populacaoAtual = populacaoAtual * taxaCrescimento;
+    }
     //SAÍDA
+
+    alert(`A população atingirá o objetivo em ${ano} anos.`);
 
 </script>

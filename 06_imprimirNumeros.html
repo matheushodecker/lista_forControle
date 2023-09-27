@@ -9,19 +9,25 @@
 
     let numeroInicial = Number(prompt(`imforme um numero`));
     let numerofinal = Number(prompt(`imforme mais um numero`));
+    let listaPares = [];
+    let listaImpares = [];
     //PROCESSAMENTO
-    for (numeroInicial; numeroInicial <= numerofinal; numeroInicial++) {
-        if (numeroInicial >= numerofinal) {
-          alert(`erro, o numero inicial deve ser menor que o numero final`)
-        }
-        else{
-            alert(`tudo certo`)
-        }
-        
+    if (numero >= numerofinal) {
+        alert(`erro, o numero inicial deve ser menor que o numero final`);
     }
-if(numeroInicial <= numerofinal){}
+    else {
+        for (let numero = numeroInicial; numero <= numerofinal; numero++) {
+            if (numero % 2 === 1) {
+                listaImpares.push(numero);
+            }
+            else if (numero % 2 === 0) {
+                listaPares.push(numero);
+            }
+        }
+    }
 
-    
+    document.write(`Os números ímpares são: ${listaImpares.join(", ")}. Os números pares são: ${listaPares.join(", ")}.`);
+
     //SAÍDA
 
 </script>
