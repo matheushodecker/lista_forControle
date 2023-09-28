@@ -8,7 +8,39 @@
     */
 
     //ENTRADA
+// Declaração das variáveis
+let candidatos = ["Candidato 1", "Candidato 2", "Candidato 3"];
+let quantidadeAlunos = Number(prompt("Quantidade de alunos votantes: "));
+let votos = [];
 
+// Laço for para ler os votos dos alunos
+for (let i = 0; i < quantidadeAlunos; i++) {
+  // Leitura do voto
+  let voto = Number(prompt("Voto do aluno " + (i + 1) + ": "));
+
+  // Validação do voto
+  if (voto < 1 || voto > 3) {
+    alert("Voto inválido!");
+    i--;
+    continue;
+  }
+
+  // Armazenamento do voto
+  votos.push(voto);
+}
+
+// Cálculo dos votos de cada candidato
+let votosC1 = votos.filter(voto => voto == 1).length;
+let votosC2 = votos.filter(voto => voto == 2).length;
+let votosC3 = votos.filter(voto => voto == 3).length;
+
+// Cálculo das porcentagens de votos de cada candidato
+let percentualC1 = votosC1 / quantidadeAlunos * 100;
+let percentualC2 = votosC2 / quantidadeAlunos * 100;
+let percentualC3 = votosC3 / quantidadeAlunos * 100;
+
+// Impressão do resultado da votação
+alert(`Resultado da votação: \n Candidato | Votos | Porcentagem \n ${candidatos[0]} | ${votosC1} | ${percentualC1}% \n ${candidatos[1]} | ${votosC2} | ${percentualC2}% \n ${candidatos[2]} | ${votosC3} | ${percentualC3}%`);
 
     //PROCESSAMENTO
 

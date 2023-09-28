@@ -7,10 +7,22 @@
 
     //ENTRADA
 
+    let soma = 0;
+    let media = 0;
+
+    for (let i = 0; i < 5; i++) {
+
+        let numero = Number(prompt("Digite o número " + (i + 1) + ": "));
+
+        soma += numero;
+    }
 
     //PROCESSAMENTO
 
+    media = soma / 5;
 
     //SAÍDA
+
+    alert(`Média: ${media}`);
 
 </script>
